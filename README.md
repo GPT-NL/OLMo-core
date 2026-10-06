@@ -1,93 +1,205 @@
-# OLMo-core OS
+<div style="text-align: center;">
+
+  <h1>
+    <a href="https://gpt-nl.nl/" target="_blank"><img src="https://gpt-nl.nl/publish/pages/5180/beeldmerk-gpt_nl.svg" alt="GPT-NL" width="200"></a>
+    <br>
+    OLMo-core GPT-NL Fork
+  </h1>
+
+#### Fork of OLMo-core, supporting the construction of the <a href="https://gpt-nl.nl" target="_blank">GPT-NL</a> model.
+
+</div>
+
+> This repository is part of [GPT-NL](https://gpt-nl.nl/), a responsible alternative to existing language models, using lawfully obtained Dutch data and sharing proceeds with copyright holders to promote fairness and strengthen Europe's digital position.
+> We aim to be as transparent as possible about how the model has been created. This open source repository should be considered as an effort to support this transparency and fairness, not to be seen as a working product of any kind.  
+> This fork is not officially affiliated with Allen AI or the creation of OLMo.
+> For any questions regarding GPT-NL, check our [website](https://gpt-nl.nl/). Any questions regarding this specific repository can be sent to [Anne Stijns](mailto:anne.stijns@tno.nl) or submitted as an issue in the issue tracker of this repository.
 
 
-
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-* [Create](https://docs.gitlab.com/user/project/repository/web_editor/#create-a-file) or [upload](https://docs.gitlab.com/user/project/repository/web_editor/#upload-a-file) files
-* [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://ci.tno.nl/gitlab/gpt-nl/model-development/olmo-core-os.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-* [Set up project integrations](https://ci.tno.nl/gitlab/gpt-nl/model-development/olmo-core-os/-/settings/integrations)
-
-## Collaborate with your team
-
-* [Invite team members and collaborators](https://docs.gitlab.com/user/project/members/)
-* [Create a new merge request](https://docs.gitlab.com/user/project/merge_requests/creating_merge_requests/)
-* [Automatically close issues from merge requests](https://docs.gitlab.com/user/project/issues/managing_issues/#closing-issues-automatically)
-* [Enable merge request approvals](https://docs.gitlab.com/user/project/merge_requests/approvals/)
-* [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-* [Get started with GitLab CI/CD](https://docs.gitlab.com/ci/quick_start/)
-* [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/user/application_security/sast/)
-* [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/topics/autodevops/requirements/)
-* [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/user/clusters/agent/)
-* [Set up protected environments](https://docs.gitlab.com/ci/environments/protected_environments/)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+<div align="center">
+  <!-- <img src="https://github.com/allenai/OLMo/assets/8812459/774ac485-a535-4768-8f7c-db7be20f5cc3" width="300"/> -->
+  <img src="https://huggingface.co/datasets/allenai/blog-images/resolve/main/olmo2/olmo.png" alt="OLMo Logo" width="280" style="margin-left:'auto' margin-right:'auto' display:'block'"/>
+  <br>
+  <h1>OLMo-core</h1>
+  <h4>Building blocks for OLMo modeling and training</h4>
+</div>
+<p align="center">
+  <a href="https://olmo-core.readthedocs.io/en/latest/">
+    <img alt="Docs" src="https://img.shields.io/badge/API-docs-red">
+  </a>
+  <a href="https://github.com/allenai/OLMo-core/tree/main/src/examples">
+    <img alt="Examples" src="https://img.shields.io/badge/API-examples-994B00">
+  </a>
+  <a href="https://github.com/allenai/OLMo-core/releases/tag/v1.9.0">
+    <img alt="Pypi" src="https://img.shields.io/pypi/v/ai2-olmo-core.svg">
+  </a>
+  <a href="https://github.com/allenai/OLMo-core/blob/main/LICENSE">
+    <img alt="GitHub License" src="https://img.shields.io/github/license/allenai/OLMo">
+  </a>
+  <a href="https://arxiv.org/pdf/2501.00656.pdf">
+    <img alt="Paper URL" src="https://img.shields.io/badge/arxiv-2402.00838-orange">
+  </a>
+  <a href="https://playground.allenai.org">
+    <img alt="Playground" src="https://img.shields.io/badge/Ai2-Playground-F0529C">
+  </a>
+  <a href="https://discord.gg/sZq3jTNVNG">
+    <img alt="Discord" src="https://img.shields.io/badge/Discord%20-%20blue?style=flat&logo=discord&label=Ai2&color=%235B65E9">
+  </a>
+</p>
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+First install [PyTorch](https://pytorch.org) according to the instructions specific to your operating system and hardware.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+For development, we recommend installing from source:
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+```bash
+git clone https://github.com/allenai/OLMo-core.git
+cd OLMo-core
+pip install -e .[all]
+```
+Or you can install from PyPI with:
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+```bash
+pip install ai2-olmo-core
+```
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+There are a number of optional dependencies that must be installed to use certain functionality as well, including:
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+- [flash-attn](https://github.com/Dao-AILab/flash-attention), [ring-flash-attn](https://github.com/zhuzilin/ring-flash-attention), and [TransformerEngine](https://github.com/NVIDIA/TransformerEngine) for the corresponding attention backends.
+- [Liger-Kernel](https://github.com/linkedin/Liger-Kernel) for a low-memory "fused-linear" loss implementation.
+- [torchao](https://github.com/pytorch/ao) for float8 training.
+- [grouped_gemm](https://github.com/tgale96/grouped_gemm) for dropless mixture-of-experts (MoE) models. You may need to compile from source until [PR #21](https://github.com/tgale96/grouped_gemm/pull/21) is released (post v0.1.6).
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+The published [Docker images](https://github.com/orgs/allenai/packages?repo_name=OLMo-core) contain all core and optional dependencies, and are regularly tested on our in-house H100 clusters.
+But there are several things to keep in mind if you intend to use these images:
 
-## License
-For open source projects, say how it is licensed.
+- They do not come with the OLMo-core package installed, only its dependencies, to accommodate for regular code changes.
+- They may not work on your own cluster if you have different hardware or driver/CUDA versions.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+If the published images do not work for your use-case for any of the above reasons, you could adapt our [Dockerfile](https://github.com/allenai/OLMo-core/blob/main/src/Dockerfile) to build your own images.
+
+## Official training scripts
+
+Official training scripts for released models can be found in [`src/scripts/official/`](https://github.com/allenai/OLMo-core/tree/main/src/scripts/official).
+
+These scripts are meant to be launched with ``torchrun``, or with OLMo-core's Beaker launch CLI if you have access to Beaker.
+
+For example:
+
+```bash
+torchrun --nproc-per-node=8 src/scripts/official/OLMo2/OLMo-2-0325-32B-train.py \
+  --save-folder=/path/to/save/checkpoints
+```
+
+You can override most configuration options from the command-line. For example, to override the learning rate you could launch the script like this:
+
+```bash
+torchrun --nproc-per-node=8 src/scripts/official/OLMo2/OLMo-2-0325-32B-train.py \
+  --save-folder=/path/to/save/checkpoints \
+  --train_module.optim.lr=6e-3
+```
+
+To continue annealing from a checkpoint, we use a separate script which can be launched like this:
+
+```bash
+torchrun --nproc-per-node=8 src/scripts/official/OLMo2/OLMo-2-0325-32B-anneal.py \
+  --save-folder=/path/to/save/checkpoints \
+  --checkpoint=https://olmo-checkpoints.org/ai2-llm/peteish32/step721901
+```
+
+### Available Training Scripts
+
+| Model Family | Directory | Description |
+|--------------|-----------|-------------|
+| **OLMo-2** | [`src/scripts/official/OLMo2/`](https://github.com/allenai/OLMo-core/tree/main/src/scripts/official/OLMo2) | Training scripts and model card for OLMo-2 32B models |
+| **OLMo-3** | [`src/scripts/official/OLMo3/`](https://github.com/allenai/OLMo-core/tree/main/src/scripts/official/OLMo3) | Training scripts and model cards for OLMo-3 7B and 32B models |
+
+## Inference
+
+### With Hugging Face Transformers
+
+You can use our Hugging Face [transformers](https://github.com/huggingface/transformers) integration to run inference on the OLMo checkpoints:
+
+```bash
+pip install transformers>=4.57.0
+```
+
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+olmo = AutoModelForCausalLM.from_pretrained("allenai/Olmo-3-1125-32B")
+tokenizer = AutoTokenizer.from_pretrained("allenai/Olmo-3-1125-32B")
+message = ["Language modeling is "]
+inputs = tokenizer(message, return_tensors='pt', return_token_type_ids=False)
+# inputs = {k: v.to('cuda') for k,v in inputs.items()} # optional verifying cuda
+# olmo = olmo.to('cuda')
+response = olmo.generate(**inputs, max_new_tokens=100, do_sample=True, temperature=1.0, top_p=0.7)
+print(tokenizer.batch_decode(response, skip_special_tokens=True)[0])
+```
+
+Alternatively, with the Hugging Face pipeline abstraction:
+
+```python
+from transformers import pipeline
+olmo_pipe = pipeline("text-generation", model="allenai/Olmo-3-1125-32B")
+print(olmo_pipe("Language modeling is"))
+```
+
+### With vLLM
+
+[vLLM](https://docs.vllm.ai/en/latest/) provides high-throughput inference for OLMo models. You can use it for offline batched inference:
+
+```bash
+pip install vllm>=0.11.0
+```
+
+```python
+from vllm import LLM, SamplingParams
+llm = LLM(model="allenai/Olmo-3-1125-32B")
+sampling_params = SamplingParams(temperature=1.0, top_p=0.7)
+prompts = ["Language modeling is"]
+outputs = llm.generate(prompts, sampling_params)
+for output in outputs:
+    prompt = output.prompt
+    generated_text = output.outputs[0].text
+    print(f"Prompt: {prompt!r}, Generated text: {generated_text!r}")
+```
+
+For more details, see the [vLLM documentation](https://docs.vllm.ai/en/latest/getting_started/quickstart/#offline-batched-inference).
+
+### With Olmo-core (beta)
+
+Autoregressive generation is supported directly in Olmo-core. Using this capability, we provide a chat-loop demo that can be used to interact with models in an interactive chat session:
+
+```bash
+python -m olmo_core.generate.chat https://olmo-checkpoints.org/ai2-llm/Olmo-3-1025-7B/stage3/step11921/ --max-new-tokens 512
+```
+
+## Evaluation
+
+Additional tools for evaluating OLMo models are available at the [OLMo Eval](https://github.com/allenai/OLMo-eval) and [olmes](https://github.com/allenai/olmes) repositories.
+
+## Development
+
+The Python library source code is located in `src/olmo_core`. The corresponding tests are located in `src/test`. The library docs are located in `docs`. You can build the docs locally with `make docs`.
+
+Code checks:
+
+- We use `pytest` to run tests. You can run all tests with `pytest -v src/test`. You can also point `pytest` at a specific test file to run it individually.
+- We use `isort` and `black` for code formatting. Ideally you should integrate these into your editor, but you can also run them manually or configure them with a pre-commit hook. To validate that all files are formatted correctly, run `make style-check`.
+- We use `ruff` as our primary linter. You can run it with `make lint-check`.
+- We use `mypy` as our type checker. You can run it with `make type-check`.
+
+## Citing
+
+```bibtex
+@misc{olmo20242olmo2furious,
+      title={{2 OLMo 2 Furious}},
+      author={{Team OLMo} and Pete Walsh and Luca Soldaini and Dirk Groeneveld and Kyle Lo and Shane Arora and Akshita Bhagia and Yuling Gu and Shengyi Huang and Matt Jordan and Nathan Lambert and Dustin Schwenk and Oyvind Tafjord and Taira Anderson and David Atkinson and Faeze Brahman and Christopher Clark and Pradeep Dasigi and Nouha Dziri and Michal Guerquin and Hamish Ivison and Pang Wei Koh and Jiacheng Liu and Saumya Malik and William Merrill and Lester James V. Miranda and Jacob Morrison and Tyler Murray and Crystal Nam and Valentina Pyatkin and Aman Rangapur and Michael Schmitz and Sam Skjonsberg and David Wadden and Christopher Wilhelm and Michael Wilson and Luke Zettlemoyer and Ali Farhadi and Noah A. Smith and Hannaneh Hajishirzi},
+      year={2024},
+      eprint={2501.00656},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2501.00656},
+}
+```
